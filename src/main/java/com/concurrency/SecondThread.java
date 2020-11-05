@@ -11,7 +11,7 @@ public class SecondThread implements Runnable {
     }
 
     public void run() {
-        while (counter.getValue() <= Counter.END_POINT) {
+        while (counter.isValueLessThanEndPoint()) {
             int i = counter.increment();
             logger.info("Runnable thread: " + i);
         }

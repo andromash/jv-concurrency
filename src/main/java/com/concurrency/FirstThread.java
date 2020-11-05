@@ -12,7 +12,7 @@ public class FirstThread extends Thread {
 
     @Override
     public void run() {
-        while (counter.getValue() <= Counter.END_POINT) {
+        while (counter.isValueLessThanEndPoint()) {
             int i = counter.increment();
             logger.info("Extend Thread: " + i);
         }
